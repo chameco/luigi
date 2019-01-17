@@ -31,8 +31,7 @@
 (define-derived-mode luigi-mode nil "Luigi"
   "Major mode for line-oriented user interfaces."
   :after-hook (luigi-clear)
-  (setq-local luigi-prompt-marker (make-marker))
-  (setq-local luigi-do-function (lambda (str) (luigi-write str))))
+  (setq-local luigi-prompt-marker (make-marker)))
 
 (defun luigi-emit-prompt ()
   "Display the prompt from the line interface."
